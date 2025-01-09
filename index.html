@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <!-- font awesome file link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dement AI</title>
+    <link rel="icon" type="image/x-icon" href="./image/Logo.png">
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header class="header">
+        <div class="iicone">
+            <a href="#" class="logo"><i class="fa fa-gamepad" style="font-size:30px"></i>Dement AI</a>
+            <div class="fas fa-bars"></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Project</a></li>
+                <li><a href="#service2">Play Game</a></li>
+                <li><a href="#service">Game Levels</a></li>
+<!--                 <li><a href="#team">Team</a></li> -->
+                <!-- <li><a href="https://dementia-prediction.streamlit.app/" target="_blank">Link</a></li> -->
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section id="home" class="home">
+        <img src="./image/Logo.png" alt="this is the picture" height="250px" width="250px">
+        <h1 class="banner">The Mind Marathon Challenge</h1>
+        <h3 class="slogan">Cognitive game series for memory and focus enhancement in dementia care.
+        </h3>
+        <a href="./level/indexlevel1.html"><button>Start Game</button></a>
+
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+
+        <div class="fas fa-cog nut1"></div>
+        <div class="fas fa-cog nut2"></div>
+
+
+    </section>
+
+
+    <!-- home section ends -->
+
+
+    <!-- about section starts  -->
+
+    <section id="about" class="about">
+        <h1 class="heading">About Project</h1>
+        <div class="row">
+            <div class="content">
+                <h3>Enhancing Cognitive Health and Predicting Dementia</h3>
+                <p>This project is an innovative web-based application designed to aid in the early detection of dementia through interactive cognitive games and advanced deep learning models. Recognizing the critical importance of early diagnosis in managing dementia, our solution combines engaging gameplay with sophisticated predictive analytics to provide a comprehensive and accessible screening tool.</p>
+                <p><b>Motivation and Objective:</b>
+                    The primary motivation behind this project is the growing need for early and accurate dementia diagnosis, which can significantly improve patient care and outcomes. Our objective is to create a user-friendly platform that not only makes the screening process engaging but also leverages modern technology to enhance diagnostic accuracy.</p>
+                <span id="moreText" class="hidden">
+                    <p><b>How It Works:</b>
+                        The application features two main levels of a memory card matching game, each designed to assess different cognitive abilities.<br>
+Our project features an innovative approach to early dementia detection through engaging memory games and advanced deep learning models. In Game Level 1: Basic Match, users participate in a classic memory card matching game. A countdown timer assesses short-term memory by giving users a brief period to memorize card positions before they begin matching pairs. Performance is tracked based on the user's ability to complete the task within a set number of clicks or a specified time limit. Game Level 2: Ultimate Test introduces increased complexity with dynamic grid changes and hidden bombs that reset the game if clicked. Users must complete this level within a click threshold or time limit to proceed. Upon completion, they are redirected to a prediction page where they input health metrics and provide a facial image for further analysis. Our predictive system employs two convolutional neural network models: the MOD-1D-CNN, which processes health metrics such as blood oxygen levels, weight, age, diabetes status, body temperature, and heart rate; and the MOD-2D-CNN, which analyzes facial images to detect signs of dementia based on facial features. Together, these models offer a comprehensive assessment of dementia risk.</p>
+                    <p><b>Future Scope:</b>
+                        We aim to enhance the application by integrating real-time video analysis to monitor users' behavior and further refine the predictive accuracy. The project also plans to transition to a Flask-based architecture for better integration with robust databases and cloud platforms, ensuring scalability and reliability.</p>
+                </span>
+                <button class="btn" id="readMoreButton">read more</button>
+            </div>
+            <div class="image">
+                <img src="./image/mental1.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- abuout section ends  -->
+
+    <section id="service2" class="service">
+        <h1 class="heading">2 Levels of Cognitive Challenge</h1>
+        <div class="row" id="levelbutton">
+            <div class="container">
+                <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div class="circle active">
+                        <a href=""><i class="icon fa fa-smile-o"></i>
+                            <div class="caption">Basic<br>Match
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="circle">
+                        <a href=""><i class="icon fa fa-cubes"></i>
+                            <div class="caption">Ultimate<br>Test</div>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="btn" id="prev" disabled>Prev</button>
+                <button class="btn" id="next">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- service section starts  -->
+
+    <section id="service" class="service">
+
+        <h1 class="heading">Game Levels</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="./image/mental2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Level - 1 (Basic Match)</h3>
+                <p>Welcome to Level 1, where we lay the foundation for your memory-enhancing journey. Your task is
+                    simple: match identical cards by clicking on them. Follow these steps to play successfully:
+                <ul class="point">
+                    <li>Begin by clicking on any card to reveal its
+                        image.</li>
+                    <li>Take a moment to remember the picture and its
+                        specific position on the grid.</li>
+                    <li>Your goal is to find and click on the card that
+                        shares the same image and position.</li>
+                    <li>Continue this process, pairing up cards until
+                        you've successfully cleared the entire board.</li>
+                </ul>
+                </p>
+
+                <a href="./level/indexlevel1.html"><button class="btn">Start Game <i class="fa fa-lock"
+                            style="font-size:17px"></i></button></a>
+            </div>
+
+        </div>
+
+       
+                <div class="row">
+
+
+            <div class="content">
+                <h3>level - 2 (Ultimate Test)</h3>
+                <p>You've reached the grand finale, Level 2, which combines all the challenges you've faced thus far.
+                    Achieve victory with these comprehensive instructions:
+                <ul class="point">
+                    <li>Begin by clicking on any card to unveil its image.
+                    </li>
+                    <li>Commit both the picture and its initial location to memory.
+                    </li>
+                    <li>Proceed to match cards, navigate the grids, adapt to rotations, and anticipate grid swaps.
+                    </li>
+                    <li>To emerge victorious in this ultimate memory marathon, you must harness all your skills and
+                        cognitive abilities.</li>
+                </ul>
+                </p>
+                <a href="./level/indexlevel1.html"><button class="btn">Start Game <i class="fa fa-lock"
+                            style="font-size:17px"></i></button></a>
+            </div>
+            <div class="image">
+                <img src="./image/mental7.png" alt="">
+            </div>
+            
+
+        </div>
+        <!-- <div class="row">
+            <div class="content">
+                <h3>Congratulations!</h3>
+                <p> After successfully completing all 7 levels, you've not only completed an engaging cognitive
+                    challenge but also significantly enhanced your memory and strategic thinking skills. Well done on
+                    your remarkable journey!</p>
+            </div>
+            <div class="image">
+                <img src="./image/mental9.png" alt="">
+            </div>
+
+        </div> -->
+
+    </section>
+
+
+    <!-- project contents section ends -->
+
+    <!-- project contents section ends -->
+
+    <!-- team section starts  -->
+<!-- 
+    <section id="team" class="team">
+
+        <h1 class="heading">our team</h1>
+
+        <div class="row">
+            <div class="card">
+                <div class="image">
+                    <img src="./image/SC sir.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Sanjay Chakraborty</h3>
+                    <span>Mentor</span>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/sanjay.chakraborty.182" class="fa fa-facebook-square"></a>
+                        <a href="https://www.linkedin.com/in/sanjay-chakraborty-90808a153/" target="blank"
+                            class="fa fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image">
+                    <img src="./image/PritiPaul.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Priti Paul</h3>
+                    <span>Team Member</span>
+                    <div class="icons">
+                        <a href="https://github.com/pritipaul" target="blank" class="fab fa-github"></a>
+                        <a href="https://www.facebook.com/priti.paul.14811692/" class="fa fa-facebook-square"></a>
+                        <a href="https://www.linkedin.com/in/priti-paul-3aa930200/" target="blank"
+                            class="fa fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image">
+                    <img src="./image/SoubhikAcharya.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Soubhik Acharya</h3>
+                    <span>Team Member</span>
+                    <div class="icons">
+                        <a href="https://github.com/Soubhik2002" target="blank" class="fab fa-github"></a>
+                        <a href="https://www.facebook.com/soubhik.acharya.1/" target="blank"
+                            class="fa fa-facebook-square"></a>
+                        <a href="https://www.instagram.com/Soubhik_8825/" target="blank" class="fa fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </section> -->
+
+    <!-- team section ends -->
+
+
+    <!-- FAQ section starts  -->
+
+    <section id="faq" class="faq">
+
+        <h1 class="heading">FAQs</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="./image/faq-image.svg" alt="">
+            </div>
+
+            <div class="accordion-container">
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>What is the purpose of this project?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>The purpose of this project is to create an engaging and accessible tool for the early detection of dementia. By combining interactive memory games with advanced machine learning models, we aim to provide a comprehensive screening platform that can help identify early signs of dementia and facilitate timely medical intervention.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>How do the memory games work?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Our application features two levels of memory card matching games. In Level 1: Basic Match, users are given a grid of cards to memorize and match within a certain number of clicks or time limit. Level 2: Ultimate Test introduces additional complexities, such as dynamic grid changes and hidden bombs, to further challenge users' cognitive abilities. Performance in these games helps assess cognitive function.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>What types of data are used to predict dementia?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>The predictive models in our application use two types of data. The MOD-1D-CNN model analyzes health metrics such as blood oxygen levels, weight, age, diabetes status, body temperature, and heart rate. The MOD-2D-CNN model evaluates facial images to detect signs of dementia based on facial features. Together, these models provide a comprehensive assessment.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>How is user data protected?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>We prioritize user privacy and data security. All health metrics and facial images are securely stored and transmitted using robust encryption methods. We comply with relevant data protection regulations to ensure that users' personal information is safeguarded at all times.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>What are the future plans for this project?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Future developments for this project include integrating real-time video analysis to enhance behavioral assessments during gameplay. Additionally, we plan to transition the application to a Flask-based architecture for better scalability and integration with robust databases like SQLite, SQL, or MongoDB. We also aim to host the application on cloud platforms such as AWS or Google Cloud for improved reliability and accessibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ section ends -->
+    
+
+    <!-- footer section starts  -->
+    <section class="footer">
+        <h1>Dement AI</h1>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- jquery file link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- custom js file link  -->
+
+    <script src="./js/main.js"></script>
+
+
+</body>
+
+</html>
+
+
+<!-- https://dementia-prediction.streamlit.app/ -->
+
+
+
+
